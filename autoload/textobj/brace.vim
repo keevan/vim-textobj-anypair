@@ -1,7 +1,7 @@
 function! s:select(object_type)
     call search('[\|(\|{\|<\|"\|''', 'bce')
     let start_position = getpos('.')
-    normal! %
+    call search('[\|(\|{\|<\|"\|''', 'e')
     let end_position = getpos('.')
 
     if a:object_type ==? 'i'
