@@ -1,7 +1,13 @@
 function! s:select(object_type)
     call search('[\|(\|{\|<\|"\|''', 'bce')
     let start_position = getpos('.')
-    call search('[\|(\|{\|<\|"\|''', 'e')
+    let found_char = matchstr(getline('.'), '\%' . col('.') . 'c.')
+    if found_char =~ '[\|(\|{\|<'
+      normal! %
+    else
+      call search(found_char, 'e')
+    endif
+
     let end_position = getpos('.')
 
     if a:object_type ==? 'i'
