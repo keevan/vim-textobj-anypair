@@ -1,5 +1,5 @@
 function! s:select(object_type)
-    call search("[|(|{|<|'|\"', 'bce')
+    call search("[|(|{|<|'|\"", 'bce')
     let start_position = getpos('.')
     normal! %
     let end_position = getpos('.')
