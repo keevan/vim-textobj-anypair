@@ -23,3 +23,14 @@ Inspired by [t9md's vim-mode-plus](https://github.com/t9md/atom-vim-mode-plus/)
 
 Thanks to those who have made changes from the main branch to extend it further. I appreciate it. It should make adding additional pairs easier to add if required
 
+
+## TODO
+
+- Add support for:
+  - Single quote
+  - Double quote
+  - Back Tick
+  - Angle Bracket
+- Learn how to test vim plugins
+- Add all test cases for all types of matching 'pairs'
+
